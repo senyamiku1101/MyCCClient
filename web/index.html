@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MyCCClient · Claude Code 管理器</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <!-- 顶栏 -->
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">◆</span> MyCCClient
+      <span class="brand-sub">Claude Code 管理器</span>
+    </div>
+    <div class="search-wrap">
+      <input id="search" type="search" placeholder="全局搜索：项目 / 会话 / 历史输入…  (Ctrl+K)" autocomplete="off" />
+      <div id="search-results" class="search-results hidden"></div>
+    </div>
+    <div class="top-actions">
+      <button id="btn-dashboard" class="btn" title="用量看板">📊 看板</button>
+      <button id="btn-settings" class="btn" title="配置">⚙</button>
+      <button id="btn-refresh" class="btn" title="刷新">↻</button>
+    </div>
+  </header>
+
+  <!-- 三栏主体 -->
+  <main class="layout">
+    <aside id="pane-projects" class="pane pane-projects">
+      <div class="pane-head">项目 <span id="proj-count" class="count"></span>
+        <label class="toggle"><input type="checkbox" id="show-archived" /> 含归档</label>
+      </div>
+      <div id="project-list" class="list"></div>
+    </aside>
+
+    <section id="pane-sessions" class="pane pane-sessions">
+      <div class="pane-head">
+        <span id="sessions-title">会话</span>
+        <span id="sess-count" class="count"></span>
+      </div>
+      <div id="session-list" class="list"><div class="empty">← 选择左侧项目</div></div>
+    </section>
+
+    <section id="pane-detail" class="pane pane-detail">
+      <div id="detail" class="detail"><div class="empty big">选择一个会话查看完整对话</div></div>
+    </section>
+  </main>
+
+  <!-- 遮罩弹层：看板 / 设置 -->
+  <div id="overlay" class="overlay hidden">
+    <div class="modal">
+      <div class="modal-head">
+        <span id="modal-title"></span>
+        <button id="modal-close" class="btn">✕</button>
+      </div>
+      <div id="modal-body" class="modal-body"></div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast hidden"></div>
+
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

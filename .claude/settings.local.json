@@ -1,0 +1,36 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git clone *)",
+      "Bash(pnpm install *)",
+      "PowerShell(Get-ChildItem *)",
+      "PowerShell(claude *)",
+      "PowerShell(Test-Path *)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(python -c 'import json,collections,sys; c=collections.Counter\\(\\); [c.update\\([json.loads\\(l\\).get\\('\\\\''type'\\\\'','\\\\''?'\\\\''\\)]\\) for l in open\\(sys.argv[1],encoding='\\\\''utf-8'\\\\''\\) if l.strip\\(\\)]; print\\(dict\\(c\\)\\)' 'C:\\\\Users\\\\ZhangYuhan\\\\.claude\\\\projects\\\\D--Documents-AIProjects-TOKENICODE\\\\01a7601d-ec4c-46ca-b38a-61f3de089c42.jsonl')",
+      "Bash(python -c 'import json,sys; [print\\(json.dumps\\({k:\\(str\\(v\\)[:120]\\) for k,v in json.loads\\(l\\).items\\(\\)},ensure_ascii=False\\)\\) or sys.exit\\(\\) for l in open\\(sys.argv[1],encoding='\\\\''utf-8'\\\\''\\) if l.strip\\(\\) and json.loads\\(l\\).get\\('\\\\''type'\\\\''\\)=='\\\\''user'\\\\'']' 'C:\\\\Users\\\\ZhangYuhan\\\\.claude\\\\projects\\\\D--Documents-AIProjects-TOKENICODE\\\\01a7601d-ec4c-46ca-b38a-61f3de089c42.jsonl')",
+      "Bash(python -m pip --version)",
+      "Bash(python -m pip show fastapi uvicorn)",
+      "Bash(python _inspect.py)",
+      "Bash(HTTPS_PROXY=http://127.0.0.1:7897 HTTP_PROXY=http://127.0.0.1:7897 python -m pip install -q fastapi)",
+      "Bash(python -c \"import fastapi, uvicorn; print\\('fastapi', fastapi.__version__, '| uvicorn ok'\\)\")",
+      "Bash(python run.py --no-browser --port 8765)",
+      "Bash(curl -s --noproxy '*' http://127.0.0.1:8765/api/health)",
+      "Bash(break)",
+      "Bash(curl -s --noproxy '*' http://127.0.0.1:8765/)",
+      "Bash(curl -s --noproxy '*' -o /dev/null -w \"status=%{http_code} type=%{content_type}\\\\n\" http://127.0.0.1:8765/app.js)",
+      "PowerShell(Get-NetTCPConnection *)",
+      "Bash(curl -s --noproxy * http://127.0.0.1:8765/api/projects/D--Documents-AIProjects-MyCCClient/sessions)",
+      "Bash(python -X utf8 -c \"import json,sys;d=json.load\\(sys.stdin\\);print\\('filename:',d['filename']\\);print\\(d['markdown'][:240]\\)\")",
+      "Bash(python -X utf8 -c \"import json,sys;d=json.load\\(sys.stdin\\);print\\([\\(s['id'][:8],s['pinned']\\) for s in d]\\)\")",
+      "Bash(python -X utf8 -c ' *)",
+      "Bash(xargs wc -l)",
+      "Bash([ -f \"$F\" ])",
+      "Bash(gh auth *)",
+      "Bash(git init *)",
+      "Bash(git add *)",
+      "Bash(git commit *)"
+    ]
+  }
+}

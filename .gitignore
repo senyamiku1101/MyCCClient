@@ -1,0 +1,14 @@
+# 应用运行时数据（sidecar 元数据 + 回收站），不纳入版本控制
+data/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
